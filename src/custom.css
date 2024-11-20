@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+  background-color: #0e0e0e; /* Dark background */
+  padding: 0;
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400; /* Font style that is modern and appealing */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-Screen Image Styles */
+.fullscreen-image {
+  height: 100vh;
+  width: 100%;
+  position: fixed; /* Fixed position to prevent jumping */
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
+.fullscreen-image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fullscreen-image__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Comforter Brush', cursive; /* Apply Comforter Brush font */
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 3.5rem; /* Adjust the font size as needed */
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+/* Custom styles for card transparency and background */
+.card-container {
+  background: rgba(45, 45, 45, 0.85); /* Dark card background */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: white;
+  height: 250px; /* Square card shape */
+  width: 250px; /* Square card shape */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card image to cover the entire card */
+.card-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Vendor/Food name and price at the bottom */
+.card-container h2, .card-container h3, .card-container p {
+  position: absolute;
+  bottom: 40px; /* Move text up to make room for the button */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Enhanced custom card hover effect */
+.card-container:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar styles */
+nav {
+  background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%); /* Warm red to orange gradient */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Main content styles */
+main {
+  margin-top: 100vh; /* Position main content below the full-screen image */
+  background-color: #0e0e0e; /* Dark background for main content */
+  padding: 20px 0;
+}
+
+/* Container adjustments */
+.container {
+  padding-top: 0; /* Remove extra padding */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Vendor/Food grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+  gap: 20px; /* Increase gap between items */
+  max-width: 1000px; /* Restrict maximum width for better centering */
+  width: 100%; /* Ensure grid takes full width */
+}
+
+/* Button styles */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.card-container button {
+  position: absolute;
+  bottom: 10px; /* Position the button at the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Make the button wider */
+}
+
+/* Additional styles for better visual appeal */
+h1, h2, h3 {
+  color: #ffffff; /* White for headings */
+}
+
+p {
+  color: white; /* White for paragraph text */
+}
+
+.vendor-header {
+  margin-bottom: 20px; /* Add some space between header and cards */
+}
